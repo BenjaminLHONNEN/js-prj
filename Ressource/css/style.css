@@ -1,0 +1,172 @@
+body,html
+{
+    margin: 0;
+    padding: 0;
+    background-color: #909090;
+    font-family: Calibri;
+}
+header
+{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #303030;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: solid #606060 4px;
+    z-index: 1;
+}
+button
+{
+    border: solid 2px white;
+    border-radius: 5px;
+    color: white;
+    background-color: #606060;
+    font-size: 1em;
+}
+table,tr,td
+{
+    text-align: center;
+    padding: 0.5%;
+}
+table
+{
+    background-color: white;
+    color: black;
+    width: 100%;
+    text-align: center;
+    border-radius: 1%;
+}
+td,img
+{
+    height: 100px;
+}
+
+
+
+#game
+{
+    background-color: white;
+    border-radius: 1%;
+    margin: 1%;
+    padding: 2%;
+}
+#secondPlayerConfig
+{
+    display: none;
+}
+#victoryMessage
+{
+    z-index: 0;
+    display: none;
+    color: white;
+    background-color: #303030;
+    border-radius: 2%;
+    padding: 3%;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+}
+#playerName
+{
+    border-radius: 3%;
+}
+#playerName
+{
+    padding: 0.5%;
+}
+
+.preGameSettingsPositions
+{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+}
+.preGameSettings
+{
+    color: white;
+    text-align: center;
+    background-color: #303030;
+    padding: 2%;
+    border-radius: 1%;
+    animation: animAllumette;
+    animation-duration: 2s;
+    z-index: 0;
+}
+.rules
+{
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    background-color: #303030;
+    padding: 2%;
+    border-radius: 1%;
+    animation: animAllumette;
+    animation-duration: 2s;
+    z-index: 0;
+}
+.mainWindow
+{
+    display: none;
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 20%;
+    left: 15%;
+    right: 15%;
+    background-color: #303030;
+    padding: 2%;
+    border-radius: 1%;
+    animation: animAllumette;
+    animation-duration: 2s;
+    z-index: 0;
+}
+.line
+{
+    text-align: center;
+    padding: 0;
+    height: 125px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0.5%;
+    border-radius: 1%;
+}
+.allumette
+{
+    display: inline;
+    margin: 1%;
+    height: 100px;
+    animation: animAllumette;
+    animation-duration: 1s;
+}
+.imageContent
+{
+    height: 100px;
+    padding: 0;
+    width: 35px;
+    display: inline;
+}
+.example
+{
+    background-color: white;
+    border-radius: 1%;
+    color: black;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 1%;
+}
+
+
+@keyframes animAllumette {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

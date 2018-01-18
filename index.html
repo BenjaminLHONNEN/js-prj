@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Jeu de Nim</title>
+        <link rel="stylesheet" href="Ressource/css/style.css">
+        <link rel="stylesheet" href="Ressource/icons/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+    <header>
+        <h1> Jeu de Nim </h1>
+    </header>
+
+    <div>
+
+    </div>
+
+
+    <div class="mainWindow">
+        <h2 id="playerName"> TEST </h2>
+
+        <div id="game">
+
+        </div>
+
+        <div id="inGameSettings">
+            <button id="endTurnButton" disabled onclick="endOfTurn()"> Fin du tour </button>
+        </div>
+    </div>
+
+    <div id="victoryMessage">
+        <h1 id="winTitle"> ... Win </h1>
+        <button onclick="restartGame()"> Restart </button>
+    </div>
+    <div class="preGameSettingsPositions">
+        <div class="preGameSettings">
+
+            <h2>Choisissez le nombres d'allumettes :</h2>
+
+            <select id="selectPlayers">
+                <option value="4">4</option>
+                <option value="9">9</option>
+                <option value="16">16</option>
+                <option value="25">25</option>
+                <option value="36">36</option>
+            </select>
+
+            <h2>Nombre de Joueurs :</h2>
+
+            <input onclick="onRadioClick(1)" id="radioPlayers" value="1" name="numberOfPlayers" type="radio" checked><label>1 Joueur</label><br>
+            <input onclick="onRadioClick(2)" id="radioPlayers1" value="2" name="numberOfPlayers" type="radio"><label>2 Joueurs</label><br>
+
+            <h2>Paramètres des Joueurs :</h2>
+
+            <h3>Joueur 1 :</h3>
+
+            <label>Nom : </label> <input id="textPlayers" type="text"> <label> Couleur : </label> <input id="colorPlayers" type="color">
+
+            <div id="secondPlayerConfig">
+                <h3>Joueur 2 :</h3>
+                <label>Nom : </label> <input id="textPlayers1" type="text"> <label> Couleur : </label> <input id="colorPlayers1" type="color">
+            </div>
+
+            <br><br><br>
+
+            <button onclick="createGame()">Commencer a jouer !</button>
+
+            <br><br>
+
+        </div>
+
+        <div class="rules">
+
+            <h2>Règles :</h2>
+
+            <p>
+                Dans cette version du jeu de Nim le joueur qui gagne est celui qui prend la dernière allumette.<br>
+                <br>
+            </p>
+
+            <table>
+                <tr>
+                    <td><img src="Ressource/img/allumette.png"></td>
+                    <td><img src="Ressource/img/allumetteFeu.png"></td>
+                    <td><img src="Ressource/img/allumetteEteinte.png"></td>
+                </tr>
+                <tr>
+                    <td>Allumette Normal</td>
+                    <td>Allumette En Feu</td>
+                    <td>Allumette Brulé</td>
+                </tr>
+            </table>
+
+            <p>
+                Une allumette sélectionnée est en feu, une allumette que l'on peux selectionner est normal
+                et pour finir une allumette brûlée n'est plus en jeu.<br>
+                Chaque tour un joueur peut prendre autant d'allumettes qu'il veux dans la rangée de son choix.<br>
+                Vous pouvez désélectionner une allumette en feu en cliquant dessus.<br>
+                EX : <br>
+            </p>
+
+            <div class="example">
+                <h2> cliquez dessus ! </h2>
+                <div class="line">
+                    <img id="imgExample" class="allumette" onclick="exampleClick()" src="Ressource/img/allumette.png">
+                </div>
+                <p id="pExample"> Non Sélectionnée </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <script src="Ressource/script/exemple.js"></script>
+    <script src="Ressource/script/jeuDeNime.js"></script>
+
+    </body>
+</html>
